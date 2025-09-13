@@ -68,7 +68,7 @@ export const HeroSection = () => {
             </button>
 
             <a
-              href="SanjuKishor_cv.pdf.pdf"
+              href="sanju-kishor-CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 border border-border text-foreground px-5 py-3 rounded-lg font-medium hover:bg-muted transition-transform hover:scale-105"
