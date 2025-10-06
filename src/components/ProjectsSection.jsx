@@ -5,25 +5,56 @@ import { useEffect, useState } from 'react';
 const projects = [
   {
     id: 1,
-    title: 'Landing Page',
+    title: 'Trendify-E-commerce',
     description:
-    "VirtualR is a simple platform to build VR apps with ease. Use drag-and-drop tools, live previews, and built-in templates—solo or with your team. Start building your VR world today!",
-    image: '/projects/landingpage.jpg',
-    tags: ['html', 'css', 'javascript', 'react.js', 'boostrap'],
-    demoUrl: '#',
-    githubUrl: 'https://github.com/SANJU-8273/Landing Page',
-    demoStatus: 'offline',
+      "Trendify is a modern e-commerce platform offering stylish collections for men, women, and kids. Featuring a sleek UI, dynamic product listings, and responsive design built with React, HTML, CSS, and Bootstrap — Trendify makes online shopping smooth and visually engaging.",
+    image: '/projects/landingpage.jpeg',
+    tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React.js',
+      'Bootstrap',
+      'React Router',
+      'React Context API',
+      'Responsive Design',
+      'E-commerce',
+      'Component-Based Architecture',
+      'State Management',
+      'Hooks',
+      'Flexbox',
+      'Grid'
+    ],
+
+    demoUrl: 'https://trendify-e-commerce-snowy.vercel.app/',
+    githubUrl: 'https://github.com/SANJU-8273/Trendify-E-commerce',
+    demoStatus: 'online',
   },
   {
     id: 2,
     title: 'Real Estate',
     description:
       'Find your dream home easily! Explore a variety of properties, connect with trusted agents, and make buying, selling, or renting simple and fast. Start your journey with us today!',
-    image: '/projects/estate.jpg',
-        tags: ['html', 'css', 'javascript', 'react.js', 'boostrap'],
+    image: '/projects/estate.jpeg',
+     tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React.js',
+      'Bootstrap',
+      'React Router',
+      'React Context API',
+      'Responsive Design',
+      'E-commerce',
+      'Component-Based Architecture',
+      'State Management',
+      'Hooks',
+      'Flexbox',
+      'Grid'
+    ],
 
-    demoUrl: '#',
-    githubUrl:  'https://github.com/SANJU-8273/Landing Page',
+    demoUrl: 'https://shanti-estate.vercel.app/',
+    githubUrl: 'https://github.com/SANJU-8273/Shanti-Estate',
     demoStatus: 'online',
   },
   {
@@ -32,14 +63,25 @@ const projects = [
     description:
       'Explore stunning visuals in our curated image gallery. Browse, admire, and get inspired by high-quality photos from around the world.',
     image: '/projects/image.jpg',
-        tags: ['html', 'css', 'javascript', 'react.js', 'boostrap'],
-
-    
-    demoUrl: '#',
-    githubUrl:  'https://github.com/SANJU-8273/Image gallery',
-    demoStatus: 'online',
+    tags: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React.js',
+      'Bootstrap',
+      'React Router',
+      'React Context API',
+      'Responsive Design',
+      'E-commerce',
+      'Component-Based Architecture',
+      'State Management',
+      'Hooks',
+      'Flexbox',
+      'Grid'
+    ],
+    demoStatus: 'offline',
   },
-  
+
 ];
 
 // ✅ Card component
@@ -75,9 +117,8 @@ const ProjectCard = ({ project }) => (
           className="flex items-center gap-2 text-xs sm:text-sm px-3 sm:px-4 py-2 rounded-lg border border-border hover:border-primary/50 transition-all duration-200"
         >
           <div
-            className={`w-2 h-2 rounded-full ${
-              project.demoStatus === 'online' ? 'bg-green-500' : 'bg-red-500'
-            }`}
+            className={`w-2 h-2 rounded-full ${project.demoStatus === 'online' ? 'bg-green-500' : 'bg-red-500'
+              }`}
           />
           Demo
         </a>
@@ -153,11 +194,10 @@ export const ProjectsSection = () => {
           <button
             onClick={() => paginate(-1)}
             disabled={currentPage === 0}
-            className={`p-2 sm:p-3 rounded-full border transition-all duration-300 ${
-              currentPage === 0
-                ? 'border-border/50 text-muted-foreground cursor-not-allowed'
-                : 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
-            }`}
+            className={`p-2 sm:p-3 rounded-full border transition-all duration-300 ${currentPage === 0
+              ? 'border-border/50 text-muted-foreground cursor-not-allowed'
+              : 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
+              }`}
           >
             <ArrowLeft size={16} />
           </button>
@@ -168,9 +208,8 @@ export const ProjectsSection = () => {
               <button
                 key={index}
                 onClick={() => goToPage(index)}
-                className={`w-2 h-2 rounded-full ${
-                  index === currentPage ? 'bg-primary' : 'bg-muted-foreground/30'
-                }`}
+                className={`w-2 h-2 rounded-full ${index === currentPage ? 'bg-primary' : 'bg-muted-foreground/30'
+                  }`}
               />
             ))}
           </div>
@@ -179,11 +218,10 @@ export const ProjectsSection = () => {
           <button
             onClick={() => paginate(1)}
             disabled={currentPage >= totalPages - 1}
-            className={`p-2 sm:p-3 rounded-full border transition-all duration-300 ${
-              currentPage >= totalPages - 1
-                ? 'border-border/50 text-muted-foreground cursor-not-allowed'
-                : 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
-            }`}
+            className={`p-2 sm:p-3 rounded-full border transition-all duration-300 ${currentPage >= totalPages - 1
+              ? 'border-border/50 text-muted-foreground cursor-not-allowed'
+              : 'border-border hover:border-primary/50 hover:bg-primary/5 cursor-pointer'
+              }`}
           >
             <ArrowRight size={16} />
           </button>
