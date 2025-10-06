@@ -11,12 +11,15 @@ import { useState, useEffect } from "react";
 
 export const HeroSection = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
-  const titles = [
-    "Full Stack Developer",
-    "Passionate about AI/ML",
-    "Tech Enthusiast",
-    "Problem Solver",
-  ];
+ const titles = [
+  "Frontend Developer",
+  "React.js Developer",
+  "JavaScript Enthusiast",
+  "Web Developer",
+  "UI/UX Learner",
+  "Problem Solver",
+ 
+];
 
   useEffect(() => {
     const interval = setInterval(() => {
